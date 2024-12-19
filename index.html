@@ -14,12 +14,12 @@
     <header class="header">
         <h1 class="site-title">Julia Lagache</h1>
         <nav class="nav-bar" aria-label="Navigation principale">
-            <div class="burger"></div>
+            <div class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#biographie">Biographie</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#experience">Expériences</a></li>
@@ -44,6 +44,7 @@
         <section id="contact" class="form-container">
             <h2>Me contacter</h2>
 
+            <form>
                 <label for="prenom">Prenom :</label>
                 <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required aria-required="true">
 
@@ -57,21 +58,22 @@
                 <textarea id="message" name="message" rows="5" placeholder="Votre message" required aria-required="true"></textarea>
 
                 <button type="submit">Envoyer</button>
+            </form>
         </section>
     </main>
+
     <script>
         document.querySelector('.burger').addEventListener('click', () => {
-            const navLinks = document.querySelector('nav-bar');
-            navLinks.classList.toggle('open'); // Ajoute ou retire la classe open
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
         });
 
-        document.querySelectorAll('nav-bar a').forEach(link => {
-    link.addEventListener('click', () => {
-        const navLinks = document.querySelector('nav-bar');
-        navLinks.classList.remove('open'); // Retirer la classe open pour fermer le menu
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('open');
             });
         });
-
     </script>
 </body>
 </html>
