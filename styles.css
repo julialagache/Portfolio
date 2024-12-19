@@ -1,4 +1,4 @@
-
+/* Réinitialisation globale */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@
 /* Style général */
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
     color: #333;
     background-color: #fdfdfd;
 }
@@ -31,8 +30,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 26px;
     font-weight: 700;
-    color: #000000;
-    margin: 0;
+    color: #000;
 }
 
 /* Barre de navigation */
@@ -52,10 +50,10 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-/* Burger menu */
+/* Menu burger */
 .burger {
     display: none;
     flex-direction: column;
@@ -74,10 +72,93 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Mobile styles */
+/* Contenu principal */
+main {
+    padding: 20px;
+    margin-top: 80px; /* Espace sous le header */
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #f9c4c4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Formulaire */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    border-color: #f9c4c4;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #f9c4c4;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #94bcca;
+}
+
+/* Styles responsives */
 @media (max-width: 768px) {
     .burger {
-        display: flex; /* Affiche le burger sur mobile */
+        display: flex;
     }
 
     .nav-links {
@@ -94,7 +175,7 @@ body {
     }
 
     .nav-links.open {
-        transform: translateX(0); /* Affiche le menu burger */
+        transform: translateX(0);
     }
 
     .nav-links li {
@@ -103,5 +184,9 @@ body {
 
     .nav-links li a {
         color: #fff;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
     }
 }
