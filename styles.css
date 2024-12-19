@@ -181,6 +181,61 @@ button {
 button:hover {
     background-color: #94bcca;
 }
+/* Par défaut, la navigation est masquée sur mobile */
+.navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* En dessous du header */
+    width: 100%;
+    z-index: 1;
+}
+
+/* Lorsque la navigation est active */
+.navbar.active {
+    display: flex;
+}
+
+/* Ajustements pour le bouton burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.burger span {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Rotation des barres du burger lorsqu'il est actif */
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Afficher le bouton burger uniquement en mode mobile */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+}
 
 
 /* Responsive */
