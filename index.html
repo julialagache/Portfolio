@@ -61,13 +61,13 @@
     </main>
     <script>
         document.querySelector('.burger').addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
+            const navLinks = document.querySelector('nav-bar');
             navLinks.classList.toggle('open'); // Ajoute ou retire la classe open
         });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('nav-bar a').forEach(link => {
     link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
+        const navLinks = document.querySelector('nav-bar');
         navLinks.classList.remove('open'); // Retirer la classe open pour fermer le menu
             });
         });
