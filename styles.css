@@ -119,10 +119,10 @@ main {
     order: 3; /* Assurez-vous que la troisième carte (Projets) est en dernier */
 }
 
-.project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espacement entre les projets */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
