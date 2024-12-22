@@ -110,6 +110,43 @@ main {
     line-height: 1.6;
     text-align: justify;
 }
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:nth-child(3) {
+    order: 3; /* Assurez-vous que la troisième carte (Projets) est en dernier */
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les projets */
+    margin-top: 20px;
+}
+
+.project-item {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+
 
 /* Formulaire */
 .form-container {
