@@ -6,20 +6,16 @@
     <link rel="icon" type="image/png" href="favicon.webp" sizes="16x16">
     <title>Portfolio - Julia Lagache</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="landing-page">
         <div class="hero-content">
-            <h1>Bienvenue sur mon Portfolio</h1>
-            <p>Découvrez mes projets, compétences et expériences.</p>
+            <h1 class="animated-text">Bienvenue sur mon Portfolio</h1>
             <a href="#main-content" class="cta-button">Explorer</a>
         </div>
     </div>
     
-    <a href="#main-content" class="skip-to-content">
-    </a>
     <header class="header">
         <h1 class="site-title">Julia Lagache</h1>
         <nav class="nav-bar" aria-label="Navigation principale">
@@ -42,100 +38,73 @@
         <section id="about" class="section">
             <div class="card">
                 <h2>Biographie</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="card">
                 <h2>Mes expériences</h2>
-                <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-  
-<!-- The Timeline -->
-
-<ul class="timeline">
-
-	<!-- Item 1 -->
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">Bac STMG Mercatique</span>
-				<span class="time-wrapper"><span class="time">2023</span></span>
-			</div>
-			<div class="desc">My current employment. Way better than the position before!</div>
-		</div>
-	</li>
-  
-	<!-- Item 2 -->
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">BUT MMI</span>
-				<span class="time-wrapper"><span class="time">2024 - 20...</span></span>
-			</div>
-			<div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
-		</div>
-	</li>
-
-  
-</ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <ul class="timeline">
+                    <li>
+                        <div class="direction-r">
+                            <div class="flag-wrapper">
+                                <span class="flag">Bac STMG Mercatique</span>
+                                <span class="time-wrapper"><span class="time">2023</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="direction-l">
+                            <div class="flag-wrapper">
+                                <span class="flag">BUT MMI</span>
+                                <span class="time-wrapper"><span class="time">2024 - 20??</span></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="card">
                 <h2>Mes compétences</h2>
-                <p>SKILLS BAR</p>
+                <p>Compétences variées en multimédia et internet.</p>
             </div>
             <div class="card">
                 <h2>Mes projets</h2>
                 <div class="project-gallery">
                     <div class="project-item">
-                        <img src="" alt="Description de l'image 1">
                         <p>Projet 1 : Logo de la Corsica Games Week.</p>
                     </div>
                     <div class="project-item">
-                        <img src="image2.jpg" alt="Description de l'image 2">
                         <p>Projet 2 : Description courte de ce projet.</p>
-                    </div>
-                    <div class="project-item">
-                        <img src="image3.jpg" alt="Description de l'image 3">
-                        <p>Projet 3 : Description courte de ce projet.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
 
         <section id="contact" class="form-container">
             <h2>Me contacter</h2>
-
             <form>
-                <label for="prenom">Prenom :</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required aria-required="true">
-
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
                 <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" placeholder="Votre nom" required aria-required="true">
-
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
                 <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre email" required aria-required="true">
-
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
                 <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message" required aria-required="true"></textarea>
-
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 <button type="submit">Envoyer</button>
             </form>
         </section>
     </main>
 
     <script>
-        document.querySelector('.burger').addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('open');
-        });
+        // Forcer le scroll en haut de la page au chargement
+        window.onload = () => {
+            window.scrollTo(0, 0);
+        };
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.remove('open');
-            });
+        // Menu burger toggle
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('open');
         });
+        
     </script>
 </body>
 </html>
