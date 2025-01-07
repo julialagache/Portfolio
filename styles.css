@@ -6,7 +6,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
+.text-accueil {
+    color: #000000; /* Remplace cette valeur par la couleur que tu souhaites */
+}
 /* Style de la landing page */
 .landing-page {
     position: relative;
@@ -560,6 +562,7 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
 .animated-text {
     margin: 0;
     padding-top: 3vh;
@@ -604,4 +607,15 @@ button:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* Animations de scrolling */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
