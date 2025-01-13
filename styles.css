@@ -9,11 +9,12 @@
 .text-accueil {
     color: #000000; /* Remplace cette valeur par la couleur que tu souhaites */
 }
+
 /* Style de la landing page */
 .landing-page {
     position: relative;
     height: 100vh;
-    background: linear-gradient(rgba(148, 188, 202, 0.8), rgba(255, 255, 255, 0.6)), url('hero-image.jpg') no-repeat center center/cover;
+    background: #ffffff; /* Fond blanc */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,28 @@
     color: #fff;
     padding: 20px;
     transition: background 0.3s ease-in-out;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Positionne le contenu en haut */
+    align-items: center; /* Centre horizontalement */
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-top: 20px; /* Ajuste la distance par rapport au haut */
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem; /* Ajuste la taille du texte */
+    font-weight: bold;
+    margin: 0;
 }
 
 .hero-content h1 {
@@ -61,7 +84,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: #2a3d5f;
+    background-color: #ffffff;
     position: fixed;
     width: 100%;
     top: 0;
@@ -74,7 +97,7 @@
 .site-title {
     font-size: 28px;
     font-weight: 700;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Roboto', sans-serif;
@@ -88,7 +111,7 @@
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: 600;
     font-size: 16px;
     transition: color 0.2s ease-in-out;
@@ -112,7 +135,7 @@
 .burger span {
     width: 100%;
     height: 3px;
-    background-color: #fff;
+    background-color: #000000;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -143,11 +166,18 @@ main {
 }
 
 .card {
-    background-color: #dbdbdb;
+    background-color: transparent;
+    border: solid 2px #000000;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.card:hover {
+    background-color: #e7e7e7; /* Couleur plus claire au survol */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    transform: scale(1.02); /* Agrandissement léger */
 }
 
 .card h2 {
@@ -619,3 +649,4 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+/* Header */

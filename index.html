@@ -8,7 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+      </div>
     <div class="landing-page">
         <div class="hero-content">
             <h1 class="animated-text">Julia Lagache</h1>
@@ -37,11 +41,11 @@
 
     <main id="main-content">
         <section id="about" class="section">
-            <div id="biographie" class="card scroll-hidden">
+            <div class="card scroll-hidden">
                 <h2>Biographie</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div id="experience" class="card scroll-hidden">
+            <div class="card scroll-hidden">
                 <h2>Mes expériences</h2>
                 <ul class="timeline">
                     <li>
@@ -97,15 +101,16 @@
 
     <script>
          // Détection de scrolling
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollElements = document.querySelectorAll('.scroll-hidden');
+         document.addEventListener('DOMContentLoaded', () => {
+    const scrollElements = document.querySelectorAll('.scroll-hidden');
 
-        const elementInView = (el, offset = 100) => {
-            const elementTop = el.getBoundingClientRect().top;
-            return (
-                elementTop <= 
-                (window.innerHeight || document.documentElement.clientHeight) - offset
-            );
+    const elementInView = (el, offset = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        const elementBottom = el.getBoundingClientRect().bottom;
+        return (
+            (elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset) &&
+            (elementBottom >= 0)
+        );
         };
 
         const displayScrollElement = (element) => {
@@ -137,8 +142,7 @@
         document.querySelector('.burger').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('open');
         });
-        
+
     </script>
 </body>
 </html>
-
