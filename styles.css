@@ -14,7 +14,7 @@
 .landing-page {
     position: relative;
     height: 100vh;
-    background: url('hero-image.jpg') no-repeat center center/cover; /* L'image d'arrière-plan reste */
+    
     display: flex;
     justify-content: center;
     align-items: center;
