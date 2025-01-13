@@ -663,6 +663,9 @@ button:hover {
     .main-title {
       font-size: 3em;
     }
+    #demo-canvas {
+        display: none; /* Masque le canvas sur les petits écrans */
+      }
   }
 /* Header */
 .large-header {
