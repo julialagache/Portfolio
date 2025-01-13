@@ -15,7 +15,6 @@
     position: relative;
     height: 100vh;
     background: url('hero-image.jpg') no-repeat center center/cover; /* L'image d'arrière-plan reste */
-    background-color: #ffffff; /* Ajoute un fond blanc derrière l'image */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -665,5 +664,52 @@ button:hover {
       font-size: 3em;
     }
   }
-  
-  
+/* Header */
+.large-header {
+    position: fixed; /* Fixe l'animation en haut de la page */
+    top: 0;
+    left: 0;
+    right: 0; /* Ajouté pour s'assurer que l'élément s'étend sur toute la largeur */
+    bottom: 0; /* Ajouté pour couvrir toute la hauteur */
+    width: 100%;
+    height: 100vh; /* S'assure que l'animation occupe toute la fenêtre */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1; /* Place l'animation derrière tout le contenu */
+}
+
+/* Canvas pour l'animation - placé en arrière-plan */
+#demo-canvas {
+    position: absolute; /* Fixe le canvas en position absolue par rapport à .large-header */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Utilisation de vw pour garantir une couverture totale */
+    height: 100vh; /* Utilisation de vh pour garantir une couverture totale */
+    z-index: -1; /* Assurez-vous que le canvas reste en arrière-plan */
+}
+
+/* Titre principal */
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+/* Contenu principal */
+.landing-page {
+    position: relative;
+    z-index: 1; /* Assurez-vous que le contenu reste devant l'animation */
+}
+
+/* Réduire la taille du texte sur mobile */
+@media only screen and (max-width: 768px) {
+    .main-title {
+        font-size: 3em;
+    }
+}
