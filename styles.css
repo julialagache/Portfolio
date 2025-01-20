@@ -1,4 +1,3 @@
-/* Réinitialisation globale */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +6,18 @@
 }
 
 .text-accueil {
-    color: #000000; /* Remplace cette valeur par la couleur que tu souhaites */
+    color: #000000; 
 }
 
-/* Style de la landing page */
+
 .landing-page {
     position: relative;
     height: 100vh;
-    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000; /* Texte en noir pour contraster avec le fond blanc */
+    color: #000; 
     padding: 20px;
     transition: background 0.3s ease-in-out;
 }
@@ -57,7 +55,6 @@
     transform: scale(1.05);
 }
 
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -100,7 +97,6 @@
     color: #94bcca;
 }
 
-/* Menu burger */
 .burger {
     display: none;
     flex-direction: column;
@@ -131,10 +127,9 @@
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Contenu principal */
 main {
     padding: 20px;
-    margin-top: 80px; /* Espace sous le header */
+    margin-top: 80px; 
 }
 
 .section {
@@ -145,7 +140,7 @@ main {
 }
 
 .card {
-    background-color: transparent;
+    background-color: #ffffff;
     border: solid 2px #000000;
     padding: 20px;
     border-radius: 8px;
@@ -154,9 +149,9 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .card:hover {
-    background-color: #e7e7e7; /* Couleur plus claire au survol */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
-    transform: scale(1.02); /* Agrandissement léger */
+    background-color: #e7e7e7; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.02);
 }
 
 .card h2 {
@@ -176,7 +171,7 @@ main {
 }
 
 .card:nth-child(3) {
-    order: 3; /* Assurez-vous que la troisième carte (Projets) est en dernier */
+    order: 3; 
 }
 
 .project-gallery {
@@ -272,18 +267,6 @@ main {
     text-align: left;
   }
   
-  .direction-l .flag {
-    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  }
-  
-  .direction-r .flag {
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  }
-  
   .direction-l .flag:before,
   .direction-r .flag:before {
     position: absolute;
@@ -366,9 +349,6 @@ main {
   .direction-r .desc {
     margin: 1em 0 0 0.75em;
   }
-  
-  
-  /* ================ Timeline Media Queries ================ */
   
   @media screen and (max-width: 660px) {
   
@@ -495,8 +475,6 @@ main {
     width: 100%; 
 }
 
-
-
 label {
     font-weight: bold;
     margin-bottom: 8px;
@@ -536,12 +514,10 @@ button:hover {
     background-color: #6bbfdd;
 }
 
-/* Styles responsives */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .burger {
         display: flex;
     }
-
     .nav-links {
         flex-direction: column;
         position: fixed;
@@ -562,11 +538,6 @@ button:hover {
     .nav-links li {
         margin: 10px 0;
     }
-
-    .nav-links li a {
-        color: #fff;
-    }
-
     .section {
         grid-template-columns: 1fr;
     }
@@ -576,22 +547,20 @@ button:hover {
     margin: 0;
     padding-top: 3vh;
     line-height: 1.2;
-    font-family: "Poppins", sans-serif; /* Une police plus moderne et professionnelle */
+    font-family: "Poppins", sans-serif; 
     font-weight: 700;
-    font-size: clamp(2.5rem, 6vw, 5rem); /* S'adapte à différentes tailles d'écran */
+    font-size: clamp(2.5rem, 6vw, 5rem);
     text-align: center;
     background: linear-gradient(90deg, #000000, #28aedf);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
-    background-size: 300% 100%; /* Étend le dégradé pour un mouvement dynamique */
+    background-size: 300% 100%;
     animation: gradient-shift 6s ease-in-out infinite;
-    letter-spacing: 0.05em; /* Espace subtil pour améliorer la lisibilité */
-    text-transform: uppercase; /* Uniformise le texte */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute de la profondeur */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Animation pour le dégradé */
 @keyframes gradient-shift {
     0% {
         background-position: 0% 50%;
@@ -604,7 +573,6 @@ button:hover {
     }
 }
 
-/* Animation d'apparition subtile */
 .animated-text-container {
     opacity: 0;
     transform: translateY(20px);
@@ -617,7 +585,7 @@ button:hover {
         transform: translateY(0);
     }
 }
-/* Animations de scrolling */
+
 .scroll-hidden {
     opacity: 0;
     transform: translateY(50px);
@@ -628,7 +596,7 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
-/* Header */
+
 .large-header {
     position: fixed;
     top: 0;
@@ -638,7 +606,7 @@ button:hover {
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    z-index: -1; /* Pour l'afficher en arrière-plan */
+    z-index: -1; 
   }
   
   #large-header {
@@ -664,55 +632,128 @@ button:hover {
       font-size: 3em;
     }
     #demo-canvas {
-        display: none; /* Masque le canvas sur les petits écrans */
+        display: none; 
       }
   }
-/* Header */
+
 .large-header {
-    position: fixed; /* Fixe l'animation en haut de la page */
+    position: fixed; 
     top: 0;
     left: 0;
-    right: 0; /* Ajouté pour s'assurer que l'élément s'étend sur toute la largeur */
-    bottom: 0; /* Ajouté pour couvrir toute la hauteur */
+    right: 0; 
+    bottom: 0; 
     width: 100%;
-    height: 100vh; /* S'assure que l'animation occupe toute la fenêtre */
+    height: 100vh;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
-    z-index: -1; /* Place l'animation derrière tout le contenu */
+    z-index: -1; 
 }
 
-/* Canvas pour l'animation - placé en arrière-plan */
+
 #demo-canvas {
-    position: absolute; /* Fixe le canvas en position absolue par rapport à .large-header */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* Utilisation de vw pour garantir une couverture totale */
-    height: 100vh; /* Utilisation de vh pour garantir une couverture totale */
-    z-index: -1; /* Assurez-vous que le canvas reste en arrière-plan */
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -1; 
 }
 
-/* Titre principal */
-.main-title {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-}
-
-/* Contenu principal */
 .landing-page {
     position: relative;
-    z-index: 1; /* Assurez-vous que le contenu reste devant l'animation */
+    z-index: 1; 
 }
 
 /* Réduire la taille du texte sur mobile */
 @media only screen and (max-width: 768px) {
     .main-title {
         font-size: 3em;
+    }
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+  }
+  @keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-webkit-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-moz-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  @-o-keyframes load{
+    from {
+      width: 0%
+    }
+  }
+  
+  .skillbar {
+    background-color: #636363;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.skillbar::before {
+    content: attr(data-skill); 
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s;
+    -webkit-animation: load 2s 0s;
+    -moz-animation: load 2s 0s;
+    -o-animation: load 2s 0s;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.skillbar.learning::before {
+    width: calc(20% - 14px);
+    background: #9ac4e9;
+}
+
+.skillbar.basic::before {
+    width: calc(40% - 14px);
+    background: #71A8D9;
+}
+
+.skillbar.intermediate::before {
+    width: calc(60% - 14px);
+    background: #3981BF;
+}
+
+.skillbar.advanced::before {
+    width: calc(80% - 14px);
+    background: #175a93;
+}
+
+.skillbar.expert::before {
+    width: calc(100% - 14px);
+    background: #163A59;
+}
+
+@media (max-width: 768px) {
+    .skillbar {
+        font-size: 12px;
+    }
+
+    .skillbar::before {
+        padding: 5px 0 5px 8px;
     }
 }
