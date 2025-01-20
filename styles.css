@@ -9,9 +9,21 @@
     color: #000000; 
 }
 html {
-  scroll-padding-top: 80px; /* Ajuste la valeur selon la hauteur de ta barre de navigation */
+  scroll-padding-top: 80px; 
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.profile-img {
+  width: 50px;  /* Taille de l'image de profil */
+  height: 50px;  /* Taille de l'image de profil */
+  border-radius: 50%;  /* Image ronde */
+  object-fit: cover;  /* Ne déforme pas l'image */
+  margin-right: 15px;  /* Espacement entre l'image et le texte */
+}
 
 .landing-page {
     position: relative;
@@ -73,12 +85,13 @@ html {
 }
 
 .site-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;  /* Empêche le titre de se déplacer à la ligne */
 }
 
 .nav-links {
