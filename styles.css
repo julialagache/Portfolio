@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .text-accueil {
     color: #000000; 
+}
+html {
+  scroll-padding-top: 80px; /* Ajuste la valeur selon la hauteur de ta barre de navigation */
 }
 
 
@@ -34,12 +37,11 @@
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
 }
 
 .cta-button {
-    background-color: #94bcca;
+    background-color: #5DADE2;
     color: #000;
     padding: 15px 30px;
     text-decoration: none;
@@ -60,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: #2a3d5f;
+    background-color: #2C3E50;
     position: fixed;
     width: 100%;
     top: 0;
@@ -176,29 +178,29 @@ main {
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Améliore l'adaptation */
-  gap: 30px; /* Augmente l'espacement entre les éléments */
+  gap: 30px; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
   margin-top: 30px;
-  padding: 0 20px; /* Ajoute du padding sur les côtés */
+  padding: 0 20px; 
 }
 
 .project-item {
   display: flex;
-  flex-direction: column; /* Organise les éléments en colonne */
-  justify-content: space-between; /* Aligne l'image et la description */
+  flex-direction: column; 
+  justify-content: space-between; 
   text-align: center;
   background-color: #fff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%; /* Permet de remplir l'espace */
+  height: 100%; 
 }
 
 
 .project-item:hover {
-  transform: translateY(-10px); /* Animation de survol */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .project-item img {
@@ -206,29 +208,29 @@ main {
   height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
-  object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+  object-fit: cover; 
 }
 
 .project-item p {
-  font-size: 1rem; /* Augmente légèrement la taille du texte */
+  font-size: 1rem; 
   color: #333;
   margin-top: 10px;
-  line-height: 1.4; /* Améliore la lisibilité */
+  line-height: 1.4; 
 }
 
 @media (max-width: 768px) {
   .project-gallery {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste les colonnes pour les petits écrans */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
   }
 }
 
 @media (max-width: 480px) {
   .project-item {
-      padding: 15px; /* Réduit le padding sur les petits écrans */
+      padding: 15px; 
   }
   .project-item img {
-      max-height: 200px; /* Limite la hauteur des images sur les petits écrans */
-      object-fit: contain; /* Préserve l'intégrité des images */
+      max-height: 200px; 
+      object-fit: contain; 
   }
 }
 
@@ -351,7 +353,7 @@ main {
     
     line-height: 1em;
     font-size: 0.66666em;
-    color: rgb(250,80,80);
+    color: rgb(0, 0, 0);
     vertical-align: middle;
   }
   
@@ -530,8 +532,8 @@ textarea:focus {
 }
 
 button {
-    background-color: #94bcca;
-    color: #fff;
+    background-color: #5DADE2;
+    color: #000000;
     border: none;
     padding: 12px;
     border-radius: 6px;
@@ -574,7 +576,7 @@ button:hover {
     }
 }
 
-.animated-text {
+.julialagache {
     margin: 0;
     padding-top: 3vh;
     line-height: 1.2;
@@ -696,7 +698,7 @@ button:hover {
     z-index: 1; 
 }
 
-/* Réduire la taille du texte sur mobile */
+
 @media only screen and (max-width: 768px) {
     .main-title {
         font-size: 3em;
