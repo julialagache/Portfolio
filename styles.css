@@ -758,3 +758,97 @@ button:hover {
         padding: 5px 0 5px 8px;
     }
 }
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider mechanism */
+input[type="radio"] {
+  display: none;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Project items */
+.project-item {
+  width: 33.333%;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.project-item img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Navigation dots */
+.carousel-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#slide1:checked ~ .carousel-inner {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .carousel-inner {
+  transform: translateX(-33.333%);
+}
+#slide3:checked ~ .carousel-inner {
+  transform: translateX(-66.666%);
+}
+
+/* Active dot color */
+#slide1:checked ~ .carousel-controls .dot:nth-child(1),
+#slide2:checked ~ .carousel-controls .dot:nth-child(2),
+#slide3:checked ~ .carousel-controls .dot:nth-child(3) {
+  background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .project-item p {
+      font-size: 0.9rem;
+  }
+
+  .dot {
+      height: 12px;
+      width: 12px;
+  }
+}
