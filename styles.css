@@ -675,6 +675,10 @@ button:hover {
 .container{
     width: 400px;
     margin: 0 auto;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   @keyframes load{
     from {
@@ -697,7 +701,8 @@ button:hover {
     }
   }
   
-  .skillbar {
+.skillbar {
+    width: 100%;
     background-color: #636363;
     border-radius: 15px;
     margin-bottom: 5px;
@@ -705,7 +710,6 @@ button:hover {
     color: #FFF;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -716,35 +720,32 @@ button:hover {
     padding: 5px 0 5px 10px;
     border-radius: inherit;
     animation: load 2s 0s;
-    -webkit-animation: load 2s 0s;
-    -moz-animation: load 2s 0s;
-    -o-animation: load 2s 0s;
     max-width: 100%;
     box-sizing: border-box;
 }
 
 .skillbar.learning::before {
-    width: calc(20% - 14px);
+    width: 20%;
     background: #9ac4e9;
 }
 
 .skillbar.basic::before {
-    width: calc(40% - 14px);
+    width: 40%;
     background: #71A8D9;
 }
 
 .skillbar.intermediate::before {
-    width: calc(60% - 14px);
+    width: 60%;
     background: #3981BF;
 }
 
 .skillbar.advanced::before {
-    width: calc(80% - 14px);
+    width: 80%;
     background: #175a93;
 }
 
 .skillbar.expert::before {
-    width: calc(100% - 14px);
+    width: 100%;
     background: #163A59;
 }
 
